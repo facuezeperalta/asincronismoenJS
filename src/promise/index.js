@@ -1,20 +1,24 @@
-const promise = new Promise(function(resolve,reject){
-    resolve('Hey!')
-})
+const promesa = new Promise(function(resolve,reject){
+    resolve("Hey! Todo a sido correcto");
+});
 
-const cows = 29;
+//
+const cows = 4;
 
 const countCows = new Promise(function(resolve,reject){
     if(cows > 10){
-        return resolve(`We have ${cows}, on the farm`)
+        resolve(`Tenemos ${cows} vacas, podemos producir`);
     }else{
-        reject(`there´s not cows on the farm`)
+        reject(`No contamos la cantidad necesarias de vacas necesarias para la producción.`);
     }
 });
 
-countCows.then((result) => {console.log(result)}).catch((error) => { //con catch podemos capturar el error para evitar que se trabe todo el programa por consola.
 
+countCows.then((result)=>{
+    console.log(result);
+}).catch((error) =>{
     console.log(error);
-}).finally(()=>{ // finally se coloca al final para indicar que se acabo la tarea de la promesa.
-    console.log('---Finally---')
+}).finally(() =>{
+    console.log("Fin de la ejecución");
 });
+
