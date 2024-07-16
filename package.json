@@ -12,6 +12,8 @@
   "author": "facundoperalta",
   "license": "MIT",
   "dependencies": {
+    "node-fecth": "^0.0.1-security",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "type": "module"
 }
