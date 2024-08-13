@@ -1,30 +1,22 @@
-function sum(number1,number2){
-    return number1 + number2;
+//callbacks 
+function sum(num1,num2){
+    return num1 + num2;
 }
 
-
-// esta funcion recibe un callback, callback es solo un nombre de referencia al argumento, no hace falta que se llame así
 function calc(num1,num2,callback){
-    return callback(num1,num2);
-};
-
-console.log(calc(2,2,sum)); //aca hago callback
-
-//otro ejemplo con setTimeOut.
-
-setTimeout(function (){
-    console.log("Hola javaScript")
-},2000)
-
-
-function greetting(name){ //name seria el callback,
-    console.log(`Hola ${name}`)
+    return callback(num1,num2)
 }
 
-setTimeout(greetting,2000,'facu')
+console.log(calc(5,5,sum));
+
+//otro callback, set timeOut en si misma es un call back
+setTimeout(function(){
+    console.log("Hola!!!")
+},9000)
 
 
+function greeting(name){
+    console.log(`Hola! ${name}`);
+}
 
-export function execCallback(callback) {
-    // Tu código aquí 👈
-  }
+setTimeout(greeting,3000,'Facu');
