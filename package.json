@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "node-fecth": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
     "xmlhttprequest": "^1.8.0"
   },
   "type": "module"
