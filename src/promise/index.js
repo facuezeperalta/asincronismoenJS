@@ -1,24 +1,22 @@
-const promesa = new Promise(function(resolve,reject){
-    resolve("Hey! Todo a sido correcto");
-});
+/* const promesa = new Promise(function(resolve,reject){
+    resolve("Hey!");
+}); */
 
-//
-const cows = 4;
+const cows = 20;
 
 const countCows = new Promise(function(resolve,reject){
     if(cows > 10){
-        resolve(`Tenemos ${cows} vacas, podemos producir`);
-    }else{
-        reject(`No contamos la cantidad necesarias de vacas necesarias para la producción.`);
+        resolve("Cantidad de vacas suficiente para la producción");
+    } else{
+        reject(`${cows} vacas, la cantidad no es suficiente para la produccion`);
     }
 });
 
 
-countCows.then((result)=>{
+countCows.then((result) =>{
     console.log(result);
 }).catch((error) =>{
     console.log(error);
-}).finally(() =>{
-    console.log("Fin de la ejecución");
-});
-
+}).finally(()=>{
+    console.log("terminado")
+})
